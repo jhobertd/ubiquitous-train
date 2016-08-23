@@ -90,20 +90,35 @@ p {
 }
 /*--contact-form--*/
 .w3ls-contact input[type="text"],.w3ls-contact input[type="email"],.w3ls-contact input[type="number"] {
-    width: 92%;
+    
+    width: auto;
     color: #000;
     background: #fff;
     outline: none;
     font-size: 0.9em;
-    padding: .7em 1em;
-    border: 1px solid #000;
+    padding: .3em 1em;
+    border: 0px solid #000;
     -webkit-appearance: none;
+    
+    
+    
+}
+
+form label {
+    
+    width: 92%;
+    
+    -webkit-appearance: none;
+    padding: .2em 1em;
+    float:left;
+    border: 1px solid #000;
     display: block;
     margin-bottom: 1.2em;
 }
+
 .tipo-style {
     resize: none;
-    width: 99%;
+    width: 100%;
     background: #fff;
     color: #000;
     font-size: 0.9em;

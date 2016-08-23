@@ -12,6 +12,9 @@
 <!--fonts google-->
 <link href='//fonts.googleapis.com/css?family=Niconne' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Roboto:400,100,300,300italic,500,700,900,400italic' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min">
 
        
     </head>
@@ -20,7 +23,7 @@
         // put your code here
         ?>
         <div class="main">
-        <h1> <img src="topo.png" /></h1>
+        <h1> <img src="img/topo.png" /></h1>
         <div class="main-row">
         
         <h2><span> Cadastro </span></h2>
@@ -29,10 +32,42 @@
             <div class="w3ls-contact">
                 <form action="dados.php" method="post">
                     <h4>Nome Completo</h4>
-                    <input type="text" name="nome" placeholder="Nome Completo" required="">
-                    <h4>Telefone</h4>
-                    <input type="number" name="telefone" placeholder="Telefone" required=""> 
+
                     
+  
+  
+  
+
+                    
+                    <label >
+
+                    
+
+
+
+                     <span> <i class="fa fa-user" aria-hidden="true"></i></span>
+  <input class="form-control" type="text" placeholder="Nome">
+
+                    </label>
+
+
+
+
+
+
+
+                    <h4>Telefone</h4>
+                    
+<label>
+                    <span> <i class="fa fa-phone" aria-hidden="true"></i></span>
+                    <input type="number" name="telefone" placeholder="Telefone" required=""> 
+
+                    </label>
+                    
+                    
+ 
+
+
                     <h4>Tipo</h4>
                     
                 
@@ -53,6 +88,8 @@
                 </form>
             </div>  
         </div>  
+
+
     </div>  
     </body>
 </html>
