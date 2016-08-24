@@ -4,8 +4,7 @@
         <meta charset="UTF-8">
 
         <title>Formulario de Cadastro</title>
-        
-        <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+       
 <!-- Folha de Estilo -->
     <link href="css/style.css" rel="stylesheet" type="text/css"  />
 
@@ -16,13 +15,92 @@
 <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 <link rel="stylesheet" type="text/css" href="css/font-awesome.min">
 
+
+
+<script type="text/javascript">
+/* Máscaras ER */
+
+function mascara(o,f){
+    v_obj=o
+    v_fun=f
+    setTimeout("execmascara()",1)
+}
+function execmascara(){
+    v_obj.value=v_fun(v_obj.value)
+}
+function mtel(v){
+    v=v.replace(/D/g,"");             //Remove tudo o que não é dígito
+    v=v.replace(/^(d{2})(d)/g,"($1) $2"); //Coloca parênteses em volta dos dois primeiros dígitos
+    v=v.replace(/(d)(d{4})$/,"$1-$2");    //Coloca hífen entre o quarto e o quinto dígitos
+    return v;
+}
+function id( el ){
+    return document.getElementById( el );
+}
+window.onload = function(){
+    id('telefone').onkeypress = function(){
+        mascara( this, mtel );
+    }
+}
+</script>
+
+
+
        
     </head>
-    <body>
+
+
+<body>
+        
         <?php
         // put your code here
         ?>
-        <div class="main">
+       
+
+
+
+
+
+<nav id="nav">
+
+<div  class="menu">
+
+
+
+
+            <span class="logo">  <a href="index.php"><img src="img/logo_circuito_branco.png"> </a></span> 
+
+            
+
+           <ul>
+            <li> <a href="#"> Cadastrar</a> </li>
+            <li> <a href="#"> Lançar</a> </li>
+            <li> <a href="#"> Relatórios </a> </li>
+            <li> <a href="#"> Imprimir </a> </li>
+            <li> <a href="#"> Inst. de Vencedores </a> </li>
+            <li> <a href="#"> Parceiro de Deus</a> </li>
+            <li> <a href="#"> Suporte </a> </li>
+
+
+
+
+            </ul>
+
+
+            </div>
+
+  </nav>
+
+
+      <div class="main">
+
+
+        
+
+  
+
+   
+
         <h1> <img src="img/topo.png" /></h1>
         <div class="main-row">
         
@@ -30,7 +108,7 @@
             <p>Cadastre corretamente todos os dados</p>
         
             <div class="w3ls-contact">
-                <form action="dados.php" method="post">
+                <form action="dados.php" method="post" >
                     <h4>Nome Completo</h4>
 
                     
@@ -46,7 +124,7 @@
 
 
                      <span> <i class="fa fa-user" aria-hidden="true"></i></span>
-  <input class="form-control" type="text" placeholder="Nome">
+  <input class="form-control" type="text" placeholder="Nome" maxlength="30" required="" > 
 
                     </label>
 
@@ -60,7 +138,9 @@
                     
 <label>
                     <span> <i class="fa fa-phone" aria-hidden="true"></i></span>
-                    <input type="number" name="telefone" placeholder="Telefone" required=""> 
+
+
+                    <input type="text" name="telefone" id="telefone" placeholder="Telefone" required="" maxlength="15" > 
 
                     </label>
                     
@@ -91,5 +171,7 @@
 
 
     </div>  
+
+
     </body>
 </html>
