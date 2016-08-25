@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        <title>Formulario de Cadastro</title>
+       
+<!-- Folha de Estilo -->
+    <link href="css/style.css" rel="stylesheet" type="text/css"  />
+
+<!--fonts google-->
+<link href='//fonts.googleapis.com/css?family=Niconne' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Roboto:400,100,300,300italic,500,700,900,400italic' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min">
+
+
+
+<script type="text/javascript">
+/* Máscaras ER */
+
+function mascara(o,f){
+    v_obj=o
+    v_fun=f
+    setTimeout("execmascara()",1)
+}
+function execmascara(){
+    v_obj.value=v_fun(v_obj.value)
+}
+function mtel(v){
+    v=v.replace(/D/g,"");             //Remove tudo o que não é dígito
+    v=v.replace(/^(d{2})(d)/g,"($1) $2"); //Coloca parênteses em volta dos dois primeiros dígitos
+    v=v.replace(/(d)(d{4})$/,"$1-$2");    //Coloca hífen entre o quarto e o quinto dígitos
+    return v;
+}
+function id( el ){
+    return document.getElementById( el );
+}
+window.onload = function(){
+    id('telefone').onkeypress = function(){
+        mascara( this, mtel );
+    }
+}
+</script>
+
+
+
+       
+    </head>
+
+
+<body>
+        
+        <?php
+        // put your code here
+        ?>
+       
+
+
+
+
+
+<nav id="nav">
+
+<div  class="menu">
+
+
+
+
+            <span class="logo">  <a href="index.php"><img src="img/logo_circuito_branco.png"> </a></span> 
+
+            
+
+           <ul>
+            <li> <a href="#"> Cadastrar</a> </li>
+            <li> <a href="#"> Lançar</a> </li>
+            <li> <a href="#"> Relatórios </a> </li>
+            <li> <a href="#"> Imprimir </a> </li>
+            <li> <a href="#"> Inst. de Vencedores </a> </li>
+            <li> <a href="#"> Parceiro de Deus</a> </li>
+            <li> <a href="#"> Suporte </a> </li>
+
+
+
+
+            </ul>
+
+
+            </div>
+
+  </nav>
+
+
+      <div class="main">
+
+
+        
+
+  
+
+   
+
+        <h1> <img src="img/topo.png" /></h1>
+        <div class="main-row">
+        
+        <h2><span> Cadastro </span></h2>
+            <p>Cadastre corretamente todos os dados</p>
+        
+            <div class="w3ls-contact">
+                <form action="dados.php" method="post" >
+                    <h4>Nome Completo</h4>
+
+                    
+  
+  
+  
+
+                    
+                    <label >
+
+                    
+
+
+
+                     <span> <i class="fa fa-user" aria-hidden="true"></i></span>
+  <input class="form-control" type="text" placeholder="Nome" maxlength="30" required="" > 
+
+                    </label>
+
+
+
+
+
+
+
+                    <h4>Telefone</h4>
+                    
+<label>
+                    <span> <i class="fa fa-phone" aria-hidden="true"></i></span>
+
+
+                    <input type="text" name="telefone" id="telefone" placeholder="Telefone" required="" maxlength="15" > 
+
+                    </label>
+                    
+                    
+ 
+
+
+                    <h4>Tipo</h4>
+                    
+                
+                    <select required class="tipo-style" name="tipo" />
+                   
+                   
+                   <option value="" style="color:#CDCDCD" > Selecione</option>
+                    <option value="1">Visitante</option>
+                    <option value="2">Consolidacao</option>
+                    <option value="3">Membro</option>
+                </select> 
+                
+             
+                    <div class="clear"> </div>
+                    <input type="submit" value="Salvar">
+                    
+                    <div class="clear"> </div>
+                </form>
+            </div>  
+        </div>  
+
+
+    </div>  
+
+
+    </body>
+</html>
